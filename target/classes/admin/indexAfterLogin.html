@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="../admin/_fragmentsAdmin :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage blogs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+</head>
+<body>
+
+<!--responsive on mobile device: add 'stackable' in all grid-->
+
+    <!--nav-->
+    <nav th:replace="../admin/_fragmentsAdmin :: menu(0)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container">
+            <div class="ui secondary inverted stackable menu">
+                <h2 class="ui pink header item">Moodle & Bubble</h2>
+                <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>Blogs</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Tag</a>
+
+
+
+                <div class="m-item item m-mobile-hide right menu">
+                    <div class="ui dropdown item">
+                        <div class="text">
+                            <img src="../static/images/avatar1.jpeg" class="ui avatar image" width="50">
+                            Ivana
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="#" class="item">log out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---->
+        <a href="#" class="ui menu toggle black icon button m-top-right m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+
+
+<br>
+<br>
+
+
+    <!--body-->
+    <div class="m-padded-tb-medium m-margin-tb-horizontal-big m-container-small">
+
+        <div class="ui container">
+
+            <div class="ui error large message">
+                <h2 class="ui center aligned header">Hi &nbsp;&nbsp;Ivana,</h2>
+                <h2 class="ui center aligned header">welcome home!!</h2>
+            </div>
+
+            <div class="ui segment m-margin-tb-medium">
+                <img src="../static/images/bg.jpg"  th:src="@{/images/bg.jpg}" class="ui bordered rounded image" width="100%">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--footer-->
+    <footer th:replace="../admin/_fragmentsAdmin :: footer">
+        <div class="ui inverted center aligned vertical segment m-padded-tb-massive">
+            <div class="ui container">
+                <div class="ui inverted divided stackable grid">
+                    <div class="three wide column ">
+                        <img src="../static/images/code.jpg" th:src="@{/images/code.jpg}" class="ui rounded centered image " style="width: 100px; padding-left: 2px" alt="">
+                    </div>
+                    <div class="four wide column">
+                        <h4 class="ui inverted header">Latest Blogs</h4>
+                        <div class="ui inverted link list">
+                            <a href="#" class="item">User Story</a>
+                            <a href="#" class="item">User Story</a>
+                            <a href="#" class="item">User Story</a>
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <h4 class="ui inverted header">Contact Me</h4>
+                        <div class="ui inverted link list">
+                            <a href="#" class="item">Email: ivanaluo1994@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <h4 class="ui inverted header">Contact Me</h4>
+                        <p>Moodle and Bubble's happy life~~~</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-spaced">Copyright © 2020 - 2021 Ivana designed by Ivana</p>
+        </div>
+
+    </footer>
+
+
+<!--/*/<th:block th:replace="../admin/_fragmentsAdmin :: script">/*/-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+
+<script>
+    $('.menu.toggle').click(function (){
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown();
+</script>
+
+</body>
+</html>

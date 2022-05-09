@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+</head>
+<body>
+
+<!--responsive on mobile device: add 'stackable' in all grid-->
+
+<nav th:replace="_fragments :: menu(1)">
+    <div class="ui container">
+        <div class="ui secondary inverted stackable menu">
+            <h2 class="ui pink header item">Moodle & Bubble</h2>
+            <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>Home Page</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Tag</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i>Timeline</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>About Me</a>
+            <!--search-->
+            <div class="right m-item item m-mobile-hide">
+                <div class="ui icon inverted transparent input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!---->
+    <a href="#" class="ui menu toggle black icon button m-top-right m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+
+<!--body-->
+<div class="m-padded-tb-big">
+    <div class="ui container m-padded-tb-big">
+
+        <div class="ui stackable grid">
+
+            <div class="eleven wide column m-padded-tb-horizontal-small">
+                <!--header-->
+                <div class="ui inverted top attached segment m-padded-tb-medium">
+                    <div class="ui middle aligned two column grid">
+                        <div class="column">
+                            <h3 class="ui pink header m-padded-tb-horizontal-tiny">Blog</h3>
+                        </div>
+                        <div class="right aligned column">
+                            <h3 class="ui pink header m-inline-block m-padded-tb-horizontal-tiny">3&nbsp&nbspblogs</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--content-->
+                <div class="ui attached segment m-padded-tb-horizontal-big">
+                    <div class="ui vertical segment">
+                        <!--mobile reversed: on mobile end, the photo is on top-->
+                        <div class="ui mobile reversed stackable grid">
+                            <!--left blog list-->
+                            <div class="eleven wide column">
+                                <a href="#" class="item">
+                                    <h2 class="ui header">Hello, I am moodle!</h2>
+                                </a>
+                                <p class="m-padded-tb-big">lalalala I am happy feet~~~~~lalalala I am happy feet~~~~~
+                                    lalalala I am happy feet~~~~~lalalala I am happy feet~~~~~lalalala I am happy
+                                    feet~~~~~
+                                    lalalala I am happy feet~~~~~lalalala I am happy feet~~~~~lalalala I am happy
+                                    feet~~~~~
+                                    lalalala I am happy feet~~~~~lalalala I am happy feet~~~~~lalalala I am happy
+                                    feet~~~~~
+                                </p>
+                                <div class="ui stackable grid">
+                                    <div class="eleven wide column">
+                                        <div class="ui horizontal link list">
+                                            <div class="item">
+                                                <img src="../static/images/photo.jpeg" th:src="@{/images/photo.jpeg}"
+                                                     class="ui avatar image" width="30">
+                                                <div class="content">
+                                                    <a href="#" class="header">Ivana</a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <i class="calendar icon"></i>10-11-2020
+                                            </div>
+                                            <div class="item">
+                                                <i class="eye icon"></i>123
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="five wide column center aligned">
+                                        <a href="#" target="_blank" class="ui pink basic label">cat</a>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="five wide centered column">
+                                <a href="#" target="_blank">
+                                    <img src="../static/images/cat1.jpg" th:src="@{/images/cat1.jpg}"
+                                         class="ui rounded centered image" style="width: 150px">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ui attached segment m-padded-tb-horizontal-big">
+                    <div class="ui vertical segment">
+                        <!--mobile reversed: on mobile end, the photo is on top-->
+                        <div class="ui mobile reversed stackable grid">
+                            <!--left blog list-->
+                            <div class="eleven wide column">
+                                <a href="#" class="item">
+                                    <h2 class="ui header">Hello, I am moodle!</h2>
+                                </a>
+                                <p class="m-padded-tb-big">lalalala I am happy feet~~~~~lalalala I am happy feet~~~~~
+                                    lalalala I am happy feet~~~~~lalalala I am happy feet~~~~~lalalala I am happy
+                                    feet~~~~~
+                                    lalalala I am happy feet~~~~~lalalala I am happy feet~~~~~lalalala I am happy
+                                    feet~~~~~
+                                    lalalala I am happy feet~~~~~lalalala I am happy feet~~~~~lalalala I am happy
+                                    feet~~~~~
+                                </p>
+                                <div class="ui stackable grid">
+                                    <div class="eleven wide column">
+                                        <div class="ui horizontal link list">
+                                            <div class="item">
+                                                <img src="../static/images/photo.jpeg" th:src="@{/images/photo.jpeg}"
+                                                     class="ui avatar image" width="30">
+                                                <div class="content">
+                                                    <a href="#" class="header">Ivana</a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <i class="calendar icon"></i>10-11-2020
+                                            </div>
+                                            <div class="item">
+                                                <i class="eye icon"></i>123
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="five wide column center aligned">
+                                        <a href="#" target="_blank" class="ui pink basic label">cat</a>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="five wide centered column">
+                                <a href="#" target="_blank">
+                                    <img src="../static/images/cat1.jpg" th:src="@{/images/cat1.jpg}"
+                                         class="ui rounded centered image" style="width: 150px">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ui attached segment m-padded-tb-horizontal-big">
+                    <div class="ui vertical segment">
+                        <!--mobile reversed: on mobile end, the photo is on top-->
+                        <div class="ui mobile reversed stackable grid">
+                            <!--left blog list-->
+                            <div class="eleven wide column">
+                                <a href="#" class="item">
+                                    <h2 class="ui header">Hello, I am moodle!</h2>
+                                </a>
+                                <p class="m-padded-tb-big">lalalala I am happy feet~~~~~lalalala I am happy feet~~~~~
+                                    lalalala I am happy feet~~~~~lalalala I am happy feet~~~~~lalalala I am happy
+                                    feet~~~~~
+                                    lalalala I am happy feet~~~~~lalalala I am happy feet~~~~~lalalala I am happy
+                                    feet~~~~~
+                                    lalalala I am happy feet~~~~~lalalala I am happy feet~~~~~lalalala I am happy
+                                    feet~~~~~
+                                </p>
+                                <div class="ui stackable grid">
+                                    <div class="eleven wide column">
+                                        <div class="ui horizontal link list">
+                                            <div class="item">
+                                                <img src="../static/images/photo.jpeg" th:src="@{/images/photo.jpeg}"
+                                                     class="ui avatar image" width="30">
+                                                <div class="content">
+                                                    <a href="#" class="header">Ivana</a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <i class="calendar icon"></i>10-11-2020
+                                            </div>
+                                            <div class="item">
+                                                <i class="eye icon"></i>123
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="five wide column center aligned">
+                                        <a href="#" target="_blank" class="ui pink basic label">cat</a>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="five wide centered column">
+                                <a href="#" target="_blank">
+                                    <img src="../static/images/cat1.jpg" th:src="@{/images/cat1.jpg}"
+                                         class="ui rounded centered image" style="width: 150px">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!--footer-->
+                <div class="ui inverted bottom attached segment">
+                    <div class="ui two column grid">
+                        <div class="column">
+                            <a href="#" class="ui pink button">previous</a>
+                        </div>
+                        <div class="right aligned column">
+                            <a href="#" class="ui pink button">next</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="five wide column m-padded-tb-horizontal-small">
+                <!--category-->
+                <div class="ui segments m-margin-tb-big">
+                    <div class="ui inverted segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <i class="idea icon"></i>category
+                            </div>
+                            <div class="right aligned column"><a href="#" target="_blank" style="color: hotpink">more <i
+                                    class="angle double right icon"></i> </a></div>
+                        </div>
+                    </div>
+                    <div class="ui pink segment">
+                        <div class="ui fluid vertical menu">
+                            <a href="#" class="item">
+                                programming
+                                <div class="ui pink left pointing label">13</div>
+                            </a>
+                            <a href="#" class="item">
+                                hiking
+                                <div class="ui pink left pointing label">4</div>
+                            </a>
+                            <a href="#" class="item">
+                                art
+                                <div class="ui pink left pointing label">38</div>
+                            </a>
+                            <a href="#" class="item">
+                                movie
+                                <div class="ui pink left pointing label">25</div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--tag-->
+                <div class="ui segments">
+                    <div class="ui inverted segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <i class="tags icon"></i>tag
+                            </div>
+                            <div class="right aligned column"><a href="#" target="_blank" style="color: hotpink">more <i
+                                    class="angle double right icon"></i> </a></div>
+                        </div>
+                    </div>
+                    <div class="ui pink segment">
+                        <a href="#" class="ui pink basic left pointing label m-margin-tb-tiny">
+                            javascript
+                            <div class="detail">5</div>
+                        </a>
+                        <a href="#" class="ui pink basic left pointing label m-margin-tb-tiny">
+                            java
+                            <div class="detail">9</div>
+                        </a>
+                        <a href="#" class="ui pink basic left pointing label m-margin-tb-tiny">
+                            python
+                            <div class="detail">8</div>
+                        </a>
+                        <a href="#" class="ui pink basic left pointing label m-margin-tb-tiny">
+                            unity
+                            <div class="detail">5</div>
+                        </a>
+                        <a href="#" class="ui pink basic left pointing label m-margin-tb-tiny">
+                            machine learning
+                            <div class="detail">25</div>
+                        </a>
+                        <a href="#" class="ui pink basic left pointing label m-margin-tb-tiny">
+                            cat
+                            <div class="detail">5</div>
+                        </a>
+                        <a href="#" class="ui pink basic left pointing label m-margin-tb-tiny">
+                            cat
+                            <div class="detail">5</div>
+                        </a>
+                        <a href="#" class="ui pink basic left pointing label m-margin-tb-tiny">
+                            cat
+                            <div class="detail">5</div>
+                        </a>
+                        <a href="#" class="ui pink basic left pointing label m-margin-tb-tiny">
+                            cat
+                            <div class="detail">5</div>
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+                <!--recommendation-->
+                <div class="ui segments m-margin-tb-big">
+                    <div class="ui inverted segment">
+                        <i class="bookmark icon"></i>recommendation
+                    </div>
+                    <div class="ui segment">
+                        <a href="#" target="_blank" class="item m-black">User story</a>
+                    </div>
+                    <div class="ui segment">
+                        <a href="#" target="_blank" class="item m-black">User story</a>
+                    </div>
+                    <div class="ui segment">
+                        <a href="#" target="_blank" class="item m-black">User story</a>
+                    </div>
+
+                </div>
+
+                <!--QR code-->
+                <h4 class="ui horizontal divider header m-padded-tb-medium">scan me</h4>
+                <div class="ui centered card" style="width: 11em">
+                    <img src="../static/images/code.jpg" th:src="@{/images/code.jpg}" class="ui rounded image">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--footer-->
+<footer th:replace="_fragments :: footer">
+    <div class="ui inverted center aligned vertical segment m-padded-tb-massive">
+        <div class="ui container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <img src="../static/images/code.jpg" th:src="@{/images/code.jpg}" class="ui rounded centered image"
+                         style="width: 100px; padding-left: 2px" alt="">
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header">Latest Blogs</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">User Story</a>
+                        <a href="#" class="item">User Story</a>
+                        <a href="#" class="item">User Story</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header">Contact Me</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Email: ivanaluo1994@gmail.com</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header">Contact Me</h4>
+                    <p>Moodle and Bubble's happy life~~~</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-spaced">Copyright © 2020 - 2021 Ivana designed by Ivana</p>
+    </div>
+
+</footer>
+
+
+<!--still valid in thymeleaf but only commentary in static page-->
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+
+<script>
+    $('.menu.toggle').click(function (){
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+</script>
+
+</body>
+</html>
