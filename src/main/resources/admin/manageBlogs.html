@@ -19,9 +19,6 @@
                 <a href="#" class="active m-item item m-mobile-hide"><i class="home icon"></i>Blogs</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Tag</a>
-
-
-
                 <div class="m-item item m-mobile-hide right menu">
                     <div class="ui dropdown item">
                         <div class="text">
@@ -36,12 +33,10 @@
                 </div>
             </div>
         </div>
-        <!---->
         <a href="#" class="ui menu toggle black icon button m-top-right m-mobile-show">
             <i class="sidebar icon"></i>
         </a>
     </nav>
-
 
     <!--secondary nav-->
     <div class="ui attached pointing menu">
@@ -51,34 +46,22 @@
                 <a href="#" class="active item m-padded-tb-horizontal-small">list</a>
             </div>
         </div>
-
-
     </div>
-
 
     <!--body-->
     <div class="m-padded-tb-medium m-margin-tb-horizontal-big m-container-small">
-
         <div class="ui container">
-
             <div class="ui success message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">
                 <i class="close icon"></i>
                 <p th:text="${message}">ssd</p>
-
             </div>
-
-
-
             <form action="#" method="post" class="ui segment form m-margin-tb-big" >
-
                 <input type="hidden" name="page">
-
                 <!--inline: doesn't fill the whole line-->
                 <div class="inline fields m-padded-tb-medium m-margin-tb-horizontal-big">
                     <div class="field">
                         <input type="text" name="title" placeholder="title">
                     </div>
-
                     <div class="field">
                         <div class="ui selection dropdown">
                             <input type="hidden" name="category">
@@ -90,12 +73,10 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="field">
                         <input type="checkbox" name="recommend" id="recommend">
                         <label for="recommend">recommend</label>
                     </div>
-
                     <div class="field">
                         <button class="ui pink basic button m-margin-tb-horizontal-big"><i class="search icon"></i>search</button>
                     </div>
@@ -125,9 +106,6 @@
                             <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui black tiny button m-margin-tb-tiny">delete</a>
                         </td>
                     </tr>
-
-
-
                 </tbody>
                 <tfoot>
                     <tr>
@@ -146,9 +124,6 @@
             <br>
         </div>
     </div>
-
-
-
 
     <!--footer-->
     <footer th:replace="../admin/_fragmentsAdmin :: footer">
@@ -176,13 +151,11 @@
                         <h4 class="ui inverted header">Contact Me</h4>
                         <p>Moodle and Bubble's happy life~~~</p>
                     </div>
-
                 </div>
             </div>
             <div class="ui inverted section divider"></div>
             <p class="m-text-spaced">Copyright © 2020 - 2021 Ivana designed by Ivana</p>
         </div>
-
     </footer>
 
 <!--/*/<th:block th:replace="../admin/_fragmentsAdmin :: script">/*/-->
@@ -198,7 +171,6 @@
 
     $('.ui.dropdown').dropdown();
 
-
     //space after message
     $('.message .close').on('click', function (){
         $(this).closest('.message').transition('fade');
@@ -209,6 +181,5 @@
         $("[name='page']").val($(obj)).data("page"); //assign the value to the hidden input page
     }
 </script>
-
 </body>
 </html>

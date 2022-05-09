@@ -11,7 +11,6 @@
 <body>
 
 <!--responsive on mobile device: add 'stackable' in all grid-->
-
 <nav th:replace="_fragments :: menu(1)">
     <div class="ui container">
         <div class="ui secondary inverted stackable menu">
@@ -28,22 +27,17 @@
                     <i class="search link icon"></i>
                 </div>
             </div>
-
         </div>
     </div>
-    <!---->
     <a href="#" class="ui menu toggle black icon button m-top-right m-mobile-show">
         <i class="sidebar icon"></i>
     </a>
 </nav>
 
-
 <!--body-->
 <div class="m-padded-tb-big">
     <div class="ui container m-padded-tb-big">
-
         <div class="ui stackable grid">
-
             <div class="eleven wide column m-padded-tb-horizontal-small">
                 <!--header-->
                 <div class="ui inverted top attached segment m-padded-tb-medium">
@@ -94,9 +88,7 @@
                                     </div>
                                     <div class="five wide column center aligned">
                                         <a href="#" target="_blank" class="ui pink basic label">cat</a>
-
                                     </div>
-
                                 </div>
                             </div>
                             <div class="five wide centered column">
@@ -105,10 +97,8 @@
                                          class="ui rounded centered image" style="width: 150px">
                                 </a>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
                 <div class="ui attached segment m-padded-tb-horizontal-big">
                     <div class="ui vertical segment">
@@ -147,9 +137,7 @@
                                     </div>
                                     <div class="five wide column center aligned">
                                         <a href="#" target="_blank" class="ui pink basic label">cat</a>
-
                                     </div>
-
                                 </div>
                             </div>
                             <div class="five wide centered column">
@@ -158,10 +146,8 @@
                                          class="ui rounded centered image" style="width: 150px">
                                 </a>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
                 <div class="ui attached segment m-padded-tb-horizontal-big">
                     <div class="ui vertical segment">
@@ -200,9 +186,7 @@
                                     </div>
                                     <div class="five wide column center aligned">
                                         <a href="#" target="_blank" class="ui pink basic label">cat</a>
-
                                     </div>
-
                                 </div>
                             </div>
                             <div class="five wide centered column">
@@ -211,13 +195,9 @@
                                          class="ui rounded centered image" style="width: 150px">
                                 </a>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
-
-
 
                 <!--footer-->
                 <div class="ui inverted bottom attached segment">
@@ -231,7 +211,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div class="five wide column m-padded-tb-horizontal-small">
                 <!--category-->
@@ -263,7 +242,6 @@
                                 movie
                                 <div class="ui pink left pointing label">25</div>
                             </a>
-
                         </div>
                     </div>
                 </div>
@@ -316,10 +294,7 @@
                             cat
                             <div class="detail">5</div>
                         </a>
-
-
                     </div>
-
                 </div>
 
                 <!--recommendation-->
@@ -336,7 +311,6 @@
                     <div class="ui segment">
                         <a href="#" target="_blank" class="item m-black">User story</a>
                     </div>
-
                 </div>
 
                 <!--QR code-->
@@ -344,9 +318,7 @@
                 <div class="ui centered card" style="width: 11em">
                     <img src="../static/images/code.jpg" th:src="@{/images/code.jpg}" class="ui rounded image">
                 </div>
-
             </div>
-
         </div>
     </div>
 </div>
@@ -396,7 +368,7 @@
 <!--/*/</th:block>/*/-->
 
 <script>
-    $('.menu.toggle').click(function (){
+    $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
     });
 

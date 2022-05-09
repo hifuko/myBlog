@@ -20,9 +20,6 @@
                 <a href="#" class="active m-item item m-mobile-hide"><i class="home icon"></i>Blogs</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Tag</a>
-
-
-
                 <div class="m-item item m-mobile-hide right menu">
                     <div class="ui dropdown item">
                         <div class="text">
@@ -37,12 +34,10 @@
                 </div>
             </div>
         </div>
-        <!---->
         <a href="#" class="ui menu toggle black icon button m-top-right m-mobile-show">
             <i class="sidebar icon"></i>
         </a>
     </nav>
-
 
     <!--secondary nav-->
     <div class="ui attached pointing menu">
@@ -52,10 +47,7 @@
                 <a href="#" th:href="@{/admin/categories}" class="item m-padded-tb-horizontal-small">list</a>
             </div>
         </div>
-
-
     </div>
-
 <br><br><br><br><br>
 
     <!--body-->
@@ -71,11 +63,8 @@
                         <input type="text" name="name" placeholder="category name" th:value="*{name}">
                     </div>
                 </div>
-
-
                 <!--error message from js-->
                 <div class="ui error message"></div>
-
                 <!--/*/
                 /*/-->
                 <div class="ui negative message" th:if="${#fields.hasErrors('name')}">
@@ -83,22 +72,16 @@
                     <div class="header">Error</div>
                     <p th:errors="*{name}">Invalid input.</p>
                 </div>
-
                 <br>
                 <div class="ui right aligned container">
                     <button type="button" class="ui button" onclick="window.history.go(-1)">back</button>
                     <button type="submit" class="ui secondary button">submit</button>
-
                 </div>
-
             </form>
         </div>
     </div>
-
 <br>
 <br><br><br><br><br><br><br>
-
-
 
     <!--footer-->
     <footer th:replace="../admin/_fragmentsAdmin :: footer">
@@ -126,13 +109,11 @@
                         <h4 class="ui inverted header">Contact Me</h4>
                         <p>Moodle and Bubble's happy life~~~</p>
                     </div>
-
                 </div>
             </div>
             <div class="ui inverted section divider"></div>
             <p class="m-text-spaced">Copyright © 2020 - 2021 Ivana designed by Ivana</p>
         </div>
-
     </footer>
 
 <!--/*/<th:block th:replace="../admin/_fragmentsAdmin :: script">/*/-->
@@ -142,8 +123,6 @@
 <!--/*/</th:block>/*/-->
 
 <script type="text/javascript">
-
-
     $('.menu.toggle').click(function (){
         $('.m-item').toggleClass('m-mobile-hide');
     });
@@ -166,10 +145,6 @@
     $('.message .close').on('click', function (){
         $(this).closest('.message').transition('fade');
     });
-
-
 </script>
-
-
 </body>
 </html>
