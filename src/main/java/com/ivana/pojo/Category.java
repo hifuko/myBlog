@@ -1,19 +1,17 @@
 package com.ivana.pojo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import org.hibernate.validator.constraints.NotBlank;
-
+import lombok.*;
+import org.hibernate.Hibernate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
-
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
@@ -23,11 +21,26 @@ public class Category {
     @Id
     @GeneratedValue
     private Long id;
-
     @NotEmpty(message = "Category name cannot be empty.")
     private String name;
-
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createTime;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date updateTime;
     @OneToMany(mappedBy = "category")
+    @ToString.Exclude
     private List<Blog> blogs = new ArrayList<>();
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Category category = (Category) o;
+        return id != null && Objects.equals(id, category.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }

@@ -23,8 +23,6 @@
             <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide" th:classappend="${num==1} ? 'active'"><i class="home icon"></i>Blogs</a>
             <a href="#" th:href="@{/admin/categories}" class="m-item item m-mobile-hide" th:classappend="${num==2} ? 'active'"><i class="idea icon"></i>Category</a>
             <a href="#" th:href="@{/admin/tags}" class="m-item item m-mobile-hide" th:classappend="${num==3} ? 'active'"><i class="tags icon"></i>Tag</a>
-
-
             <div class="m-item item m-mobile-hide right menu">
                 <div class="ui dropdown item">
                     <div class="text">
@@ -39,12 +37,10 @@
             </div>
         </div>
     </div>
-    <!---->
     <a href="#" class="ui menu toggle black icon button m-top-right m-mobile-show">
         <i class="sidebar icon"></i>
     </a>
 </nav>
-
 
 <!--footer-->
 <footer th:fragment="footer">
@@ -72,13 +68,11 @@
                     <h4 class="ui inverted header">Contact Me</h4>
                     <p>Moodle and Bubble's happy life~~~</p>
                 </div>
-
             </div>
         </div>
         <div class="ui inverted section divider"></div>
         <p class="m-text-spaced">Copyright © 2020 - 2021 Ivana designed by Ivana</p>
     </div>
-
 </footer>
 
 <!--js scripts-->
@@ -90,7 +84,6 @@
     <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
     <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
     <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
-
 </th:block>
 
 </body>

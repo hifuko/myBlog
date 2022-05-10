@@ -14,9 +14,7 @@ import java.util.Arrays;
 @Aspect
 @Component
 public class LogAspect {
-
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
 
     @Pointcut("execution(* com.ivana.web.*.*(..))") //web.all classes.all methods(any param) will be handled
     public void log(){}
@@ -31,25 +29,24 @@ public class LogAspect {
         String classMethod = joinPoint.getSignature().getDeclaringTypeName() + "."
                 + joinPoint.getSignature().getName();
         Object[] args = joinPoint.getArgs();
-
         RequestLog requestLog = new RequestLog(url, ip, classMethod, args);
-
         logger.info("requestLog = {}", requestLog);
     }
 
     @After("log()")
     public void doAfter(){
         logger.info("-------------doAfter---------------");
-
     }
 
     @AfterReturning(returning = "result", pointcut = "log()")
     public void doAfterReturn(Object result){
         logger.info("-------------doAfterReturn---------------");
         logger.info("return result: {}", result);
-
     }
 
+    /**
+     * Encapsulate all the required log info into a class
+     */
     private class RequestLog{
         private String url;
         private String ip;

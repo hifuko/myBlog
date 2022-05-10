@@ -1,19 +1,20 @@
 package com.ivana.service;
 
-import com.ivana.MyNotFoundException;
 import com.ivana.dao.CategoryRepository;
 import com.ivana.pojo.Category;
-import org.springframework.beans.BeanUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Optional;
-
 @Service
 public class CategoryServiceImpl implements CategoryService{
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     CategoryRepository repository;
@@ -31,7 +32,6 @@ public class CategoryServiceImpl implements CategoryService{
     }
 
     @Override
-    @Transactional
     public Page<Category> listCategory(Pageable pageable) {
         return repository.findAll(pageable);
     }
